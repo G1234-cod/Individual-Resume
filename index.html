@@ -1,271 +1,196 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关运祥 | 个人技术门户</title>
-    
-    <script src="https://unpkg.zhimg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        black: '#000000',
-                        geist: '#111111',
-                        accent: '#00e5ff',
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'glow': 'glow 3s ease-in-out infinite alternate',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        glow: {
-                            '0%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.1)' },
-                            '100%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.4)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <link rel="stylesheet" href="https://cdn.staticfile.net/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>关运祥 - 个人简历[cite: 1]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            background-color: #000;
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 25%);
-            background-attachment: fixed;
-        }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #555; }
-        
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none; }
         }
     </style>
 </head>
-<body class="text-gray-300 font-sans antialiased selection:bg-accent selection:text-black overflow-x-hidden">
+<body class="bg-gray-100 font-sans leading-normal tracking-normal print:bg-white text-gray-800">
 
-    <nav class="fixed w-full top-0 z-50 glass-panel border-b border-white/5 py-4 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <div class="text-white font-bold text-xl tracking-tighter">
-                G.Y.X <span class="text-accent">/</span> Terminal
-            </div>
-            <div class="flex gap-6 text-sm font-medium">
-                <a href="#skills" class="hover:text-white transition-colors">技能树</a>
-                <a href="#projects" class="hover:text-white transition-colors">项目矩阵</a>
-                <a href="#education" class="hover:text-white transition-colors">教育经历</a>
-            </div>
+<div class="max-w-4xl mx-auto my-10 p-10 bg-white shadow-xl print:shadow-none print:my-0">
+    
+    <!-- Header: 基本信息 -->
+    <header class="border-b-2 border-gray-800 pb-5 mb-6 flex justify-between items-end">
+        <div>
+            <h1 class="text-4xl font-bold mb-2">关运祥[cite: 1]</h1>
+            <p class="text-xl text-blue-600 font-semibold">求职意向：AI应用开发岗[cite: 1]</p>
         </div>
-    </nav>
-
-    <main class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex flex-col items-center justify-center min-h-screen text-center px-6">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/20 rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
-
-        <div class="z-10 animate-fade-in-up" style="animation-delay: 0.1s;">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-mono text-gray-400 mb-6">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                System Online
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
-                关运祥
-            </h1>
-            <h2 class="text-2xl md:text-3xl font-light text-gray-400 mb-8">
-                软件工程师 <span class="mx-3 text-accent/50">|</span> AI 应用开发者
-            </h2>
-            
-            <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-500 mb-12 font-mono">
-                "Code structures the logic of reality, AI expands the boundaries of the future."<br>
-                <span class="text-sm mt-2 block opacity-70">以代码重构现实逻辑，用 AI 扩展未来边界。</span>
-            </p>
-
-            <a href="/" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-black text-lg font-bold rounded-full overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
-                <span class="relative z-10">进入我的技术知识库</span>
-                <i class="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1 transition-transform"></i>
-            </a>
+        <div class="text-sm text-right leading-relaxed">
+            <p>出生年月：2005.07[cite: 1]</p>
+            <p>电话：19562523965[cite: 1]</p>
+            <p>邮箱：19562523965@163.com[cite: 1]</p>
+            <p>GitHub：<a href="https://github.com/G1234-cod" class="text-blue-500 hover:underline">github.com/G1234-cod[cite: 1]</a></p>
         </div>
-    </main>
+    </header>
 
-    <section id="skills" class="py-24 relative max-w-6xl mx-auto px-6 border-t border-white/10">
-        <div class="flex items-center gap-4 mb-12 animate-fade-in-up">
-            <h2 class="text-3xl font-bold text-white">架构与技能栈</h2>
-            <div class="h-px bg-gradient-to-r from-accent/50 to-transparent flex-1"></div>
+    <!-- 教育背景 -->
+    <section class="mb-6">
+        <h2 class="text-2xl font-bold mb-3 flex items-center"><span class="bg-gray-800 w-2 h-6 mr-2 inline-block"></span>教育背景[cite: 1]</h2>
+        <div class="flex justify-between items-baseline mb-2">
+            <h3 class="text-lg font-bold">洛阳理工学院[cite: 1]</h3>
+            <span class="text-gray-600">2023.09 - 2027.06[cite: 1]</span>
+        </div>
+        <p class="font-semibold mb-1">软件工程 | 本科[cite: 1]</p>
+        <ul class="list-disc list-inside text-sm space-y-1">
+            <li>学业成绩：平均绩点3.74，专业排名稳居前5%[cite: 1]。</li>
+            <li>主修课程：C语言(95)、算法设计与分析(94)、数据库原理与应用(93)、Python程序设计(92)、Web程序设计(92)、数据结构(90)、操作系统(90)、Java程序设计(84)[cite: 1]。</li>
+        </ul>
+    </section>
+
+    <!-- 技能证书 -->
+    <section class="mb-6">
+        <h2 class="text-2xl font-bold mb-3 flex items-center"><span class="bg-gray-800 w-2 h-6 mr-2 inline-block"></span>技能证书[cite: 1]</h2>
+        <ul class="list-disc list-inside text-sm space-y-2">
+            <li><strong>资质证书：</strong>软件设计师（中级）、普通话水平测试二级甲等[cite: 1]。</li>
+            <li><strong>编程语言：</strong>熟练使用C++、Java、Python，具备多语言全场景开发能力[cite: 1]。熟悉大模型本地化部署及 RAG 架构。</li>
+            <li><strong>后端开发：</strong>熟练使用JavaWeb、SpringBoot技术栈，掌握MySQL、SQL优化与高并发场景适配[cite: 1]。</li>
+            <li><strong>工程能力：</strong>具备从需求分析、系统设计、编码实现到测试调试、服务器部署上线的全流程独立交付能力[cite: 1]。熟练掌握基于 GitHub Actions 的 CI/CD 自动化部署流水线设计。</li>
+            <li><strong>工具框架：</strong>熟练使用GitHub进行团队协作开发，CSDN博客作者，具备技术文档撰写与技术讲解能力[cite: 1]。</li>
+            <li><strong>算法基础：</strong>扎实的算法与数据结构功底，拥有ACM-ICPC国际大学生程序设计竞赛参赛经验[cite: 1]。</li>
+        </ul>
+    </section>
+
+    <!-- 项目经历 -->
+    <section class="mb-6">
+        <h2 class="text-2xl font-bold mb-3 flex items-center"><span class="bg-gray-800 w-2 h-6 mr-2 inline-block"></span>项目经历[cite: 1]</h2>
+
+        <!-- 新增并置顶：双引擎个人技术门户系统 -->
+        <div class="mb-5">
+            <div class="flex justify-between items-baseline mb-1">
+                <h3 class="text-lg font-bold">双引擎个人技术门户系统</h3>
+                <span class="text-gray-600">独立开发者</span>
+            </div>
+            <p class="text-sm font-semibold mb-2">核心架构设计与工程化部署</p>
+            <ul class="list-disc list-inside text-sm space-y-1">
+                <li><strong>混合架构设计：</strong>首创“物理分离+逻辑聚合”双引擎架构，主引擎采用 VitePress 构建，底层多内容仓库独立维护。</li>
+                <li><strong>本地与云端联动：</strong>本地开发基于软链接实现实时预览，云端利用 GitHub Actions 实现自动化 CI/CD 部署。</li>
+                <li><strong>原生栈集成：</strong>针对特殊页面（如本简历页面），采用原生 HTML5 + Tailwind CSS 独立开发，通过 rsync 在部署阶段无缝抽取至主站。</li>
+            </ul>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass-panel p-8 rounded-2xl group hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
-                <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-2xl text-blue-400 mb-6 group-hover:scale-110 transition-transform">
-                    <i class="fa-brands fa-html5"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">前端工程化</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">深入理解现代前端工作流，熟练运用 Vite/VitePress 构建静态知识库体系，掌握 Tailwind CSS 工业级样式架构与响应式设计。</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 text-xs rounded bg-white/5 border border-white/10">VitePress</span>
-                    <span class="px-2 py-1 text-xs rounded bg-white/5 border border-white/10">Tailwind</span>
-                </div>
+        <!-- 社区互动系统 -->
+        <div class="mb-5">
+            <div class="flex justify-between items-baseline mb-1">
+                <h3 class="text-lg font-bold">基于双重验证机制的社区互动系统[cite: 1]</h3>
+                <span class="text-gray-600">2026.03 - 2026.07[cite: 1]</span>
             </div>
+            <p class="text-sm font-semibold mb-2">后端核心开发[cite: 1]</p>
+            <ul class="list-disc list-inside text-sm space-y-1">
+                <li><strong>安全算法：</strong>研发基于像素裁剪的滑动拼图与空间偏移旋转验证算法，集成5种动态验证码引擎，构建多模态安全准入体系[cite: 1]。</li>
+                <li><strong>业务架构：</strong>设计维护14张核心数据表，实现含逻辑删除的帖子管理、多级评论及收藏系统，保障积分变动的事务级一致性[cite: 1]。</li>
+                <li><strong>协作与分布式部署：</strong>主导与前端团队的接口联调；负责系统在三个服务器环境下的分布式部署（独立数据库服务器、JDK应用服务器、反向代理/用户交互服务器），确保系统具备稳定性与扩展性[cite: 1]。</li>
+            </ul>
+        </div>
 
-            <div class="glass-panel p-8 rounded-2xl group hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
-                <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-2xl text-accent mb-6 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-brain"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">AI 本地知识库部署</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">具备完整的私有大模型落地经验，熟练配置网络桥接与容器化环境，实现企业级数据物理隔离的知识库方案。</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 text-xs rounded bg-white/5 border border-white/10">Docker</span>
-                    <span class="px-2 py-1 text-xs rounded bg-white/5 border border-white/10">Ollama</span>
-                    <span class="px-2 py-1 text-xs rounded bg-white/5 border border-white/10">AnythingLLM</span>
-                    <span class="px-2 py-1 text-xs rounded bg-white/5 border border-white/10">Qwen2.5</span>
-                </div>
+        <!-- 在线考试系统 -->
+        <div class="mb-5">
+            <div class="flex justify-between items-baseline mb-1">
+                <h3 class="text-lg font-bold">在线考试系统[cite: 1]</h3>
+                <span class="text-gray-600">2025.06 - 2025.09[cite: 1]</span>
             </div>
+            <p class="text-sm font-semibold mb-2">独立开发者 | 软件著作权登记号 2025SR1796538[cite: 1]</p>
+            <ul class="list-disc list-inside text-sm space-y-1">
+                <li><strong>全栈架构设计：</strong>独立完成基于Java(Servlet)+MySQL的全栈开发，设计并实现包含用户权限管理、多题型库管理、在线自动阅卷在内的核心业务逻辑[cite: 1]。</li>
+                <li><strong>核心算法实现：</strong>研发自动随机组卷引擎，支持按难度系数与知识点比例动态生成试卷[cite: 1]。</li>
+                <li><strong>闭环交付与部署：</strong>负责项目从需求分析到服务器部署上线的全流程，完成软件著作权申报并获国家版权局授权[cite: 1]。</li>
+            </ul>
+        </div>
 
-            <div class="glass-panel p-8 rounded-2xl group hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
-                <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-2xl text-purple-400 mb-6 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-network-wired"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">大模型 API 接入与开发</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">掌握 Prompt Engineering 核心范式，熟悉多轮对话上下文管理，能够将大语言模型能力无缝集成至现有软件业务流中。</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 text-xs rounded bg-white/5 border border-white/10">API Integration</span>
-                    <span class="px-2 py-1 text-xs rounded bg-white/5 border border-white/10">AI Agents</span>
-                </div>
+        <!-- 多功能图形工具集系统 -->
+        <div class="mb-5">
+            <div class="flex justify-between items-baseline mb-1">
+                <h3 class="text-lg font-bold">多功能图形工具集系统[cite: 1]</h3>
+                <span class="text-gray-600">2025.10 - 2026.01[cite: 1]</span>
             </div>
-
-            <div class="glass-panel p-8 rounded-2xl group hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
-                <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-2xl text-green-500 mb-6 group-hover:scale-110 transition-transform">
-                    <i class="fa-brands fa-node-js"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Node.js 与工具链</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">熟练使用 Node.js 生态进行脚本编写与环境配置，掌握自动化脚本处理复杂文件路径与格式转换，熟练使用 Git/GitHub 工具链。</p>
-            </div>
-
-            <div class="glass-panel p-8 rounded-2xl group hover:border-accent/40 hover:-translate-y-1 transition-all duration-300 md:col-span-2 lg:col-span-2">
-                <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-2xl text-orange-500 mb-6 group-hover:scale-110 transition-transform">
-                    <i class="fa-brands fa-java"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Java 后端架构与部署</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">具备扎实的 Java 服务端开发基础（JSP, Servlet），追求代码全量重构中的功能完整性与一致性。熟悉 Linux 生产环境搭建（LNMP 架构、独立数据库、代理服务器部署及 SSL 证书配置），保障全栈业务闭环。</p>
-            </div>
+            <p class="text-sm font-semibold mb-2">合作开发者 | 软件著作权登记号 2026SR0127073[cite: 1]</p>
+            <ul class="list-disc list-inside text-sm space-y-1">
+                <li><strong>插件化架构：</strong>采用接口驱动模式设计插件化框架，实现图像处理、益智交互等多模块的解耦拼接与统一调度[cite: 1]。</li>
+                <li><strong>图像处理：</strong>基于OpenCV实现像素级图形处理与实时渲染，通过多线程优化提升高负载下的UI响应速度[cite: 1]。</li>
+                <li><strong>团队协作：</strong>负责模块化代码的集成与文档规范制定，通过标准接口实现各功能块的快速接入，独立完成项目成果整理并获国家软件著作权授权[cite: 1]。</li>
+            </ul>
         </div>
     </section>
 
-    <section id="projects" class="py-24 relative max-w-6xl mx-auto px-6 border-t border-white/10">
-        <div class="flex items-center gap-4 mb-12">
-            <h2 class="text-3xl font-bold text-white">项目矩阵</h2>
-            <div class="h-px bg-gradient-to-r from-accent/50 to-transparent flex-1"></div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div class="glass-panel rounded-2xl overflow-hidden group flex flex-col h-full border border-white/10 hover:border-white/30 transition-colors">
-                <div class="h-48 bg-[#0a0a0a] border-b border-white/10 relative overflow-hidden flex items-center justify-center">
-                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgMTBoNDBNMTAgMHY0ME0wIDIwaDQwTTIwIDB2NDBNMCAzMGg0ME0zMCAwdjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=')]"></div>
-                    <i class="fa-solid fa-server text-5xl text-gray-700 group-hover:text-white transition-colors duration-500 z-10"></i>
+    <!-- 实习与在校经历 -->
+    <div class="flex flex-col md:flex-row gap-6 mb-6">
+        <section class="flex-1">
+            <h2 class="text-2xl font-bold mb-3 flex items-center"><span class="bg-gray-800 w-2 h-6 mr-2 inline-block"></span>实习经历[cite: 1]</h2>
+            <div class="mb-4">
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="text-lg font-bold">编程猫[cite: 1]</h3>
+                    <span class="text-gray-600 text-sm">2025.07 - 2025.11[cite: 1]</span>
                 </div>
-                <div class="p-8 flex flex-col flex-1">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-2xl font-bold text-white">双引擎个人技术门户</h3>
-                        <span class="px-2 py-1 text-xs font-mono text-accent bg-accent/10 border border-accent/20 rounded">CI/CD</span>
-                    </div>
-                    <p class="text-gray-400 leading-relaxed mb-8 flex-1">
-                        基于 VitePress 与 mklink 架构，实现物理隔离与逻辑聚合的静态知识库，配合 GitHub Actions 实现全自动 CI/CD 部署。彻底打通纯粹前端展示与深层结构化文档的访问链路。
-                    </p>
-                    <a href="/resume-project/01-dual-engine-homepage-architecture.html" class="inline-flex items-center justify-center gap-2 w-full py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white font-medium transition-all group-hover:border-white/30">
-                        <i class="fa-solid fa-book-open text-sm"></i>
-                        阅读架构复盘
-                    </a>
-                </div>
-            </div>
-
-            <div class="glass-panel rounded-2xl overflow-hidden group flex flex-col h-full border border-white/10 hover:border-white/30 transition-colors">
-                <div class="h-48 bg-[#0a0a0a] border-b border-white/10 relative overflow-hidden flex items-center justify-center">
-                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgMTBoNDBNMTAgMHY0ME0wIDIwaDQwTTIwIDB2NDBNMCAzMGg0ME0zMCAwdjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=')]"></div>
-                    <i class="fa-solid fa-users-gear text-5xl text-gray-700 group-hover:text-white transition-colors duration-500 z-10"></i>
-                </div>
-                <div class="p-8 flex flex-col flex-1">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-2xl font-bold text-white">基于双重验证机制的社区互动系统</h3>
-                        <span class="px-2 py-1 text-xs font-mono text-green-400 bg-green-400/10 border border-green-400/20 rounded">Full-Stack</span>
-                    </div>
-                    <p class="text-gray-400 leading-relaxed mb-8 flex-1">
-                        主导设计开发的高安全性社区交互平台，完成独立服务端部署架构，规范化工程任务流设计。该系统已成功提交软件著作权登记申请并拥有完整的协同开发闭环记录。
-                    </p>
-                    <button class="inline-flex items-center justify-center gap-2 w-full py-3 bg-transparent text-gray-500 border border-white/5 rounded-lg cursor-not-allowed font-medium">
-                        <i class="fa-solid fa-lock text-sm"></i>
-                        私有仓库
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="py-24 relative max-w-6xl mx-auto px-6 border-t border-white/10">
-        <div class="flex items-center gap-4 mb-12">
-            <h2 class="text-3xl font-bold text-white">教育背景 & 认证</h2>
-            <div class="h-px bg-gradient-to-r from-accent/50 to-transparent flex-1"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[50px] pointer-events-none"></div>
-                <h3 class="text-xl font-bold text-white mb-2">洛阳理工学院</h3>
-                <p class="text-accent mb-6 font-mono text-sm">2023 - 2027 (Expected)</p>
-                
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-graduation-cap text-gray-500 mt-1"></i>
-                        <div>
-                            <p class="text-white font-medium">软件工程专业</p>
-                            <p class="text-sm text-gray-400">计算机科学学院</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-chart-line text-gray-500 mt-1"></i>
-                        <div>
-                            <p class="text-white font-medium">综合表现</p>
-                            <p class="text-sm text-gray-400">年级综合排名 Top 5%</p>
-                        </div>
-                    </li>
+                <p class="text-sm font-semibold mb-1">Python 授课老师[cite: 1]</p>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>负责Python编程入门与进阶课程教学，累计授课超100课时[cite: 1]。</li>
+                    <li>独立编写教学案例、实战项目与配套题库，为学员提供一对一代码调试与问题解答服务[cite: 1]。</li>
                 </ul>
             </div>
+        </section>
 
-            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden">
-                <div class="absolute bottom-0 right-0 w-32 h-32 bg-purple-500/10 blur-[50px] pointer-events-none"></div>
-                <h3 class="text-xl font-bold text-white mb-2">专业资质</h3>
-                <p class="text-gray-500 mb-6 font-mono text-sm">国家级认证与行业资格</p>
-                
-                <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-[0_0_15px_rgba(0,229,255,0.3)]">
-                        <i class="fa-solid fa-award text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <p class="text-white font-bold">软件设计师（中级）</p>
-                        <p class="text-xs text-gray-400">全国计算机技术与软件专业技术资格（水平）考试</p>
-                    </div>
+        <section class="flex-1">
+            <h2 class="text-2xl font-bold mb-3 flex items-center"><span class="bg-gray-800 w-2 h-6 mr-2 inline-block"></span>在校经历[cite: 1]</h2>
+            <div class="mb-4">
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="text-lg font-bold">B230413班班长[cite: 1]</h3>
+                    <span class="text-gray-600 text-sm">2023.09 - 至今[cite: 1]</span>
                 </div>
+                <ul class="list-disc list-inside text-sm space-y-1 mb-3">
+                    <li>全面负责班级日常管理与学风建设，搭建师生高效沟通桥梁，营造积极向上的班级氛围[cite: 1]。</li>
+                    <li>带领班级获得新生运动会一等奖、校级优秀先进班集体荣誉[cite: 1]。</li>
+                </ul>
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="text-lg font-bold">计算机学院团委[cite: 1]</h3>
+                    <span class="text-gray-600 text-sm">2023.09 - 2025.06[cite: 1]</span>
+                </div>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>策划并组织院级升旗仪式、迎新晚会、青马工程等多项大型活动[cite: 1]。</li>
+                    <li>负责人员安排与后勤保障工作，锻炼了大型活动统筹规划与应急处理能力[cite: 1]。</li>
+                </ul>
             </div>
+        </section>
+    </div>
+
+    <!-- 荣誉证书 -->
+    <section class="mb-6">
+        <h2 class="text-2xl font-bold mb-3 flex items-center"><span class="bg-gray-800 w-2 h-6 mr-2 inline-block"></span>荣誉证书[cite: 1]</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <ul class="list-disc list-inside space-y-1">
+                <li>2023-2024学年 国家励志奖学金（国家级）[cite: 1]</li>
+                <li>2024-2025学年 国家励志奖学金（国家级）[cite: 1]</li>
+                <li>全国大学生数学建模竞赛省级三等奖[cite: 1]</li>
+                <li>蓝桥杯全国软件和信息技术专业人才大赛省级三等奖[cite: 1]</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1">
+                <li>2025-2026学年 国家励志奖学金（国家级）[cite: 1]</li>
+                <li>ICAN创新创业大赛省级二等奖[cite: 1]</li>
+                <li>中国大学生计算机设计大赛省级三等奖[cite: 1]</li>
+                <li>中国国际大学生创新大赛（河南赛区）省级二等奖[cite: 1]</li>
+                <li>河南省省级三好学生[cite: 1]</li>
+            </ul>
         </div>
     </section>
 
-    <footer class="py-8 border-t border-white/10 text-center text-gray-600 text-sm">
-        <p>Copyright © 2026 Guan Yunxiang. All rights reserved.</p>
-        <p class="mt-2 font-mono text-xs opacity-50">Powered by Raw HTML & Tailwind CSS.</p>
-    </footer>
+    <!-- 自我评价 -->
+    <section>
+        <h2 class="text-2xl font-bold mb-3 flex items-center"><span class="bg-gray-800 w-2 h-6 mr-2 inline-block"></span>自我评价[cite: 1]</h2>
+        <p class="text-sm leading-relaxed">
+            我是具备扎实底层功底的软件工程学生，学习成绩优异，在校期间通过软件设计师（中级）认证并获多项软件著作权[cite: 1]。除了技术开发，我还具有技术授课、班长及团委骨干经历，责任心强，善于沟通与统筹[cite: 1]。渴望在实习中将技术能力落地于真实业务，为团队贡献价值[cite: 1]。
+        </p>
+    </section>
+
+    <div class="mt-8 text-center no-print">
+        <button onclick="window.print()" class="bg-gray-800 text-white px-6 py-2 rounded shadow hover:bg-gray-700 transition">打印 / 导出 PDF</button>
+    </div>
+
+</div>
 
 </body>
 </html>
